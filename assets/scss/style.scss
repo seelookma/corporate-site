@@ -90,4 +90,55 @@
     line-height: 2;
     font-size: 1.5rem;
     color: #333;
+    
+}
+.topLinks_box{
+    padding: 80px 0;
+    text-align: center;
+    &-blue{
+        
+        margin-bottom: 32px;
+        background-color: #eefafd;
+        @extend .topLinks_box;
+    }
+}
+.topLinks_img{
+    margin-bottom: 20px;
+    img{
+        width: 70%;
+    }
+}
+
+.more{
+text-align: center;
+padding: 80px;
+img{
+    height: 1rem;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+}
+.topLinks{
+    margin-bottom: 56px;
+    width: 92%;
+    margin: auto;
+}
+.contact{
+padding: 152px 8%;
+background-image: url(../img/top/contactBg.png);
+&_txt{
+    color: #fff;
+    text-align: center;
+    line-height: 2;
+    text-shadow: 0px 0px 5px rgba(78,78,78,0.95);
+    margin-bottom: 24px;
+}
+&_btn{
+    background-color: #fff;
+    display: block;
+    padding: 16px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+}
 }
