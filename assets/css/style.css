@@ -115,4 +115,61 @@
   font-size: 1.5rem;
   color: #333;
 }
+
+.topLinks_box, .topLinks_box-blue {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.topLinks_box-blue {
+  margin-bottom: 32px;
+  background-color: #eefafd;
+}
+
+.topLinks_img {
+  margin-bottom: 20px;
+}
+
+.topLinks_img img {
+  width: 70%;
+}
+
+.more {
+  text-align: center;
+  padding: 80px;
+}
+
+.more img {
+  height: 1rem;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.topLinks {
+  margin-bottom: 56px;
+  width: 92%;
+  margin: auto;
+}
+
+.contact {
+  padding: 152px 8%;
+  background-image: url(../img/top/contactBg.png);
+}
+
+.contact_txt {
+  color: #fff;
+  text-align: center;
+  line-height: 2;
+  text-shadow: 0px 0px 5px rgba(78, 78, 78, 0.95);
+  margin-bottom: 24px;
+}
+
+.contact_btn {
+  background-color: #fff;
+  display: block;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+}
 /*# sourceMappingURL=style.css.map */
