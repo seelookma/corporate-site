@@ -96,8 +96,9 @@
     padding: 80px 0;
     text-align: center;
     &-blue{
-        
+        &:first-child{
         margin-bottom: 32px;
+    }
         background-color: #eefafd;
         @extend .topLinks_box;
     }

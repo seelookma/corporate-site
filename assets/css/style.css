@@ -122,8 +122,11 @@
 }
 
 .topLinks_box-blue {
-  margin-bottom: 32px;
   background-color: #eefafd;
+}
+
+.topLinks_box-blue:first-child {
+  margin-bottom: 32px;
 }
 
 .topLinks_img {
