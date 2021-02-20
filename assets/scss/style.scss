@@ -60,6 +60,10 @@
 }
 
 .header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     padding: 16px;
@@ -93,7 +97,7 @@
     
 }
 .topLinks_box{
-    padding: 80px 0;
+    padding: 80px 0 60px;
     text-align: center;
     &-blue{
         &:first-child{
@@ -106,7 +110,7 @@
 .topLinks_img{
     margin-bottom: 20px;
     img{
-        width: 70%;
+        height: 42px;
     }
 }
 
@@ -141,5 +145,70 @@ background-image: url(../img/top/contactBg.png);
     text-align: center;
     font-weight: bold;
     border-radius: 8px;
+}
+}
+.newsBlog{
+    @extend .topLinks;
+    &_titleImg{
+        @extend .topLinks_img;
+    }
+    &_title{
+        @extend .topLinks_box;
+    }
+    &_content{
+        border-radius: 5px;
+        box-shadow: 0px 2px 3px #686283;
+    }
+    &_img{
+        margin-bottom: 32px;
+     img{
+        width: 100%;
+        border-radius: 5px 5px 0 0 ;
+    }
+}
+&_content{
+    margin-bottom: 24px;
+}
+&_date{
+    display: block;
+    margin:0 5% 5% 5%;
+}
+&_contentTitle{
+    margin:0 5% 0 5%;
+    min-height: 50px;
+    font-weight: bold;
+}
+&_tags{
+margin-right: 8px;
+color: rgb(126, 126, 126);
+
+&Box{
+    padding:0 5% 5% 5%;
+}
+}
+}
+.footer{
+    background-image: url("../img/common/footer_bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    &Img{
+        text-align: center;
+        margin-bottom: 40px;
+        img{
+            width: 80%;
+        }
+    }
+    &Address{
+        line-height: 2;
+        margin-bottom: 20px;
+    }
+}
+.toTop{
+margin-bottom: 20px;
+img{
+    width: 50px;
 }
 }
