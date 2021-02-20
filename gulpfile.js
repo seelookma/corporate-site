@@ -6,7 +6,8 @@ const postcss = require('gulp-postcss'); //autoprefixerとセット
 const autoprefixer = require('autoprefixer'); //ベンダープレフィックス付与
 const browserSync = require( 'browser-sync' ); //ブラウザ反映
 const imagemin = require('gulp-imagemin');
-
+const pngquant = require('imagemin-pngquant');
+const mozjpeg = require('imagemin-mozjpeg');
 gulp.task( 'browser-sync', function(done) {
 browserSync.init({
 
@@ -44,7 +45,16 @@ gulp.task("sass", function() {
 
 gulp.task('imgmin', (done) => {
   gulp.src('./src/img/**/*')
-      .pipe(imagemin())
+      .pipe((imagemin([
+        pngquant('80'),
+        mozjpeg({
+          quality: 90, 
+          progressive: true
+        }),
+        imagemin.svgo(),
+        imagemin.optipng(),
+        imagemin.gifsicle()
+      ])))
       .pipe(gulp.dest('./assets/img'));
       done();
     });
@@ -58,6 +68,6 @@ gulp.task('watch-files', (done) =>  {
   done();
 });
 // タスク実行
-gulp.task('default', gulp.series( gulp.parallel('watch-files', 'browser-sync', 'sass'), (done) => {
+gulp.task('default', gulp.series( gulp.parallel('watch-files', 'browser-sync', 'sass','imgmin'), (done) => {
   done();
 }));

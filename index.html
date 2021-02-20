@@ -22,16 +22,30 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo"><img src="assets/img/common/logo.svg" alt=""></div>
-        <div class="sp_globalNavBox">
-            <span class="nav_toggle">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-            <nav class="sp_globalNav">
-                <ul class="sp_globalNav__menu">
+    <header>
+        <div class="header sp">
+            <div class="logo"><img src="assets/img/common/logo.svg" alt=""></div>
+            <div class="sp_globalNavBox">
+                <span class="nav_toggle">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+                <nav class="sp_globalNav">
+                    <ul class="sp_globalNav__menu">
+                        <li><a href="">TOP</a></li>
+                        <li><a href="">SERVICE</a></li>
+                        <li><a href="">NEWS&BLOG</a></li>
+                        <li><a href="">COMPANY</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="header-pc pc">
+            <div class="logo"><img src="assets/img/common/logo.svg" alt=""></div>
+            <nav class="pc_globalNav">
+                <ul class="pc_globalNav__menu">
                     <li><a href="">TOP</a></li>
                     <li><a href="">SERVICE</a></li>
                     <li><a href="">NEWS&BLOG</a></li>
@@ -42,7 +56,8 @@
         </div>
         </header>
     <div class="mv">
-        <img src="assets/img/top/mv-top.jpg" alt="">
+        <img class="sp" src="assets/img/top/mv-top.jpg" alt="">
+        <img class="pc" src="./assets/img/common/mv-top-pc.png" alt="">
     </div>
     <section class="topLinks">
         <div class="topLinks_box">
@@ -85,16 +100,12 @@
                 <p class="newsBlog_contentTitle">タイトルタイトルタイトル...</p>
                 <div class="newsBlog_tagsBox"><span class="newsBlog_tags">#App</span><span class="newsBlog_tags">#Promotion</span><span class="newsBlog_tags">#Web</span></div>
             </div>
-        </div>
-        <div class="newsBlog_box">
             <div class="newsBlog_content">
                 <div class="newsBlog_img"><img src="./assets/img/top/newsImg.png" alt=""></div>
                 <span class="newsBlog_date">2020.03.01</span>
                 <p class="newsBlog_contentTitle">タイトルタイトルタイトル...</p>
                 <div class="newsBlog_tagsBox"><span class="newsBlog_tags">#App</span><span class="newsBlog_tags">#Promotion</span><span class="newsBlog_tags">#Web</span></div>
             </div>
-        </div>
-        <div class="newsBlog_box">
             <div class="newsBlog_content">
                 <div class="newsBlog_img"><img src="./assets/img/top/newsImg.png" alt=""></div>
                 <span class="newsBlog_date">2020.03.01</span>
@@ -106,13 +117,36 @@
             <a href="">more<img src="./assets/img/common/arrow.png" alt="矢印"></a>
         </div>
     </section>
-    <footer class="footer">
-        <div class="footerImg"><img src="./assets/img/common/logo.svg" alt=""></div>
-        <div class="footerAddress">
-            〒100-3000<br>東京都中央区銀座6-18-2 野村不動産銀座ビル
+    <footer>
+        <div class="footer sp">
+            <div class="footerImg"><img src="./assets/img/common/logo.svg" alt=""></div>
+            <div class="footerAddress">
+                〒100-3000<br>東京都中央区銀座6-18-2 野村不動産銀座ビル
+            </div>
+            <div class="toTop"><a href="#page_top"><img src="./assets/img/common/TOP.png" alt=""></a></div>
+            <small>© SHIROKUMA Inc. ALL RIGHTS RESERVED</small>
         </div>
-        <div class="toTop"><a href="#page_top"><img src="./assets/img/common/TOP.png" alt=""></a></div>
-        <small>© SHIROKUMA Inc. ALL RIGHTS RESERVED</small>
+        <div class="footer pc">
+            <div class="footer_container">
+                <div class="footer_info">
+                    <div class="footerImg"><img src="./assets/img/common/logo.svg" alt=""></div>
+                    <div class="footerAddress">
+                        〒100-3000<br>東京都中央区銀座6-18-2 野村不動産銀座ビル
+                    </div>
+                    <small>© SHIROKUMA Inc. ALL RIGHTS RESERVED</small>
+                </div>
+                <div class="toTop"><a href="#page_top"><img src="./assets/img/common/TOP.png" alt=""></a></div>
+                <div class="footerNav">
+                    <ul class="footerNav">
+                        <li><a href="">TOP
+                            </a></li>
+                        <li><a href="">SERVICE</a></li>
+                        <li><a href="">BLOG&NEWS</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 

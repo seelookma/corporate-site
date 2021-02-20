@@ -1,4 +1,15 @@
 // sp header
+$container_width-pc: 1000px;
+a{
+    transition: all 0.5s ease-out;
+}
+a:hover{
+opacity: 0.6;
+}
+
+.pc{
+ display: none;
+}
 .nav_toggle {
     display: block;
     position: relative;
@@ -51,14 +62,22 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity .5s, visibility .5s;
-    
-    background-color: #ffffff67;
+    background-color: #175283a2;
+    li{
+        margin: 10px 0;
+    }
+    a{
+        color: #fff;
+    }
 }
 .sp_globalNav.show {
     opacity: 1;
     visibility: visible;
 }
-
+.white{
+    i{
+    background-color: #fff;}
+}
 .header{
     top: 0;
     position: fixed;
@@ -210,5 +229,102 @@ color: rgb(126, 126, 126);
 margin-bottom: 20px;
 img{
     width: 50px;
+}
+
+}
+
+@media screen and (min-width:769px){
+    .sp{
+        display: none !important;
+    }
+    .pc{
+        display: block;
+    }
+    .header-pc{
+        max-width: $container_width-pc;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        align-items: center;
+        padding: 24px 0;
+    }
+    .pc_globalNav__menu{
+        display: flex;
+        li{
+            margin-left: 16px;
+        }
+    }
+.mv{
+    max-width:$container_width-pc ;
+    margin: auto;
+}
+.topLinks{
+    max-width: $container_width-pc;
+    &_box-2{
+        display: flex;
+        justify-content: space-between;
+    }
+    &_box-blue{
+        width: 100%;
+        &:first-child{
+            margin-right: 16px;
+            margin-bottom: 0;
+        }
+    }
+
+}
+.contact{
+    background-image: url("../img/common/contactBg-pc.jpg");
+    padding: 111px 0;
+    &_txt{
+        max-width: $container_width-pc;
+        margin: auto auto 32px;
+    }
+    &_btn{
+        display: block;
+        margin: auto;
+        max-width: 250px;
+    }
+}
+.topLinks_box, .topLinks_box-blue, .newsBlog_title{
+    padding-top: 110px;
+}
+.topLinks_img img, .newsBlog_titleImg img{
+    max-height: 70px;
+    height: 100%;
+}
+.newsBlog{
+    &_box{
+        display: flex;
+        justify-content:space-between ;
+
+    }
+    &_content{
+        width: 32%;
+    }
+}
+.footer{
+    
+    &_container{
+        max-width: $container_width-pc;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_info{
+        width: 100%;
+        text-align: left;
+    }
+    .toTop{
+        width: 100%;
+        img{
+            width: auto;
+        }
+    }
+    &Nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 }
