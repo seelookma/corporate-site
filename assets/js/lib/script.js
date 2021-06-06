@@ -22,6 +22,26 @@ $(function(){
           return false;
       });
     });
-    
+    if (window.matchMedia( "(min-width: 767px)" ).matches) {
+    $(function() {
+  var $win = $(window),
+      $main = $('main'),
+      $header = $('header'),
+      headerHeight = $header.outerHeight(),
+      headerPos = $header.offset().top,
+      fixedClass = 'is-fixed';
+
+  $win.on('load scroll', function() {
+    var value = $(this).scrollTop();
+    if ( value > headerPos ) {
+      $header.addClass(fixedClass);
+      $main.css('margin-top', headerHeight);
+    } else {
+      $header.removeClass(fixedClass);
+      $main.css('margin-top', '0');
+    }
+  });
+});
+    }
     //ボタンがクリックされたらTOPから0pxの位置までスクロールする
     //スクロールの速さは500ミリ秒
