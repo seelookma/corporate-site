@@ -1,4 +1,8 @@
 // sp header
+body{
+    color: #333;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 $container_width-pc: 1000px;
 a{
     transition: all 0.5s ease-out;
@@ -86,9 +90,10 @@ opacity: 0.6;
     display: flex;
     justify-content: space-between;
     padding: 16px;
+    z-index: 1;
 }
 .logo{
-    width: 50%;
+    width: 20%;
     img{
         width: 100%;
     }
@@ -176,7 +181,7 @@ background-image: url(../img/top/contactBg.png);
     }
     &_content{
         border-radius: 5px;
-        box-shadow: 0px 2px 3px #686283;
+        box-shadow: 0px 2px 13px #686283;
     }
     &_img{
         margin-bottom: 32px;
@@ -232,13 +237,33 @@ img{
 }
 
 }
-
+.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: #fff;
+    
+    .header-pc{
+        padding: 10px;
+        height: 5vh;
+        transition: 1s;
+    }
+  }
 @media screen and (min-width:769px){
     .sp{
         display: none !important;
     }
     .pc{
         display: block;
+    }
+    header{
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        background-color: #fff;
     }
     .header-pc{
         max-width: $container_width-pc;
@@ -247,6 +272,8 @@ img{
         margin: auto;
         align-items: center;
         padding: 24px 0;
+        height: 10vh;
+        transition: 1s;
     }
     .pc_globalNav__menu{
         display: flex;
@@ -255,8 +282,11 @@ img{
         }
     }
 .mv{
-    max-width:$container_width-pc ;
-    margin: auto;
+    max-width:100% ;
+    margin: 10vh auto auto auto;
+    img{
+        width: 100%;
+    }
 }
 .topLinks{
     max-width: $container_width-pc;
