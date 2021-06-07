@@ -8,6 +8,7 @@ const browserSync = require( 'browser-sync' ); //ブラウザ反映
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const mozjpeg = require('imagemin-mozjpeg');
+const sassGlob = require("gulp-sass-glob");
 gulp.task( 'browser-sync', function(done) {
 browserSync.init({
 
@@ -28,6 +29,7 @@ gulp.task("sass", function() {
   return (
     gulp
       .src("assets/scss/*.scss")
+      .pipe(sassGlob()) // Sassの@importにおけるglobを有効にする
       // Sassのコンパイルを実行
       .pipe(sass())
       .pipe( postcss([ autoprefixer(
@@ -63,7 +65,7 @@ gulp.task('watch-files', (done) =>  {
   gulp.watch("./src/img/**/*", gulp.task('imgmin'));
   gulp.watch("./**/*.html", gulp.task('browser-reload'));
   gulp.watch("./assets/css/*.css", gulp.task('browser-reload'));
-  gulp.watch("./assets/scss/*.scss", gulp.task('sass'));
+  gulp.watch("./assets/scss/**", gulp.task('sass'));
   gulp.watch("./assets/**/*", gulp.task('browser-reload'));
   done();
 });
