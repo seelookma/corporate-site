@@ -1,5 +1,7 @@
-// sp header
-body{
-    color: #333;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+@import "foundation/reset";
+@import "foundation/mixin";
+@import "foundation/base";
+@import "layout/**";
+@import "object/component/**";
+@import "project/**";
+@import "utility/**";
