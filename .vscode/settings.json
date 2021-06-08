@@ -5,6 +5,9 @@
         "savePath": "/assets/css"
       }
     ],
+    "liveSassCompile.settings.excludeList": [ 
+      "**/node_modules/**"
+      ],
     "liveServer.settings.port": 5502,
     "git.ignoreLimitWarning": true
 }

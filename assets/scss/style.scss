@@ -1,7 +1,2 @@
-@import "foundation/reset";
-@import "foundation/mixin";
-@import "foundation/base";
-@import "layout/**";
-@import "object/component/**";
-@import "project/**";
-@import "utility/**";
+@import "import/mixin";
+@import "import/common";
