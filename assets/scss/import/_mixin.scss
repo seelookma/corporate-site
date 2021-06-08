@@ -3,6 +3,7 @@ $main-color:#2EA7E0;
 $sub-color:#036DB7;
 $accent-color:#E68A00;
 $break-point: 767px;
+$transitionDuration: 0.4s;
 $gradation:linear-gradient($sub-color,$main-color);
 
 @mixin media-sp {
