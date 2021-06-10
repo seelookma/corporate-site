@@ -38,4 +38,14 @@ $('.mv__slick').slick({
     speed: 1000,
     slidesToShow: 1
 });
+var timer = false;
+$(window).resize(function() {
+if (timer !== false) {
+clearTimeout(timer);
+}
+timer = setTimeout(function() {
+//リロードする
+location.reload();
+}, 200);
+});
 });
