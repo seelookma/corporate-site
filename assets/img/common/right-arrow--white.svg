@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="14" viewBox="0 0 34 14">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 34 14">
+      <image width="34" height="14" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAOCAYAAABKKc6PAAABBElEQVQ4jcXUzSrEYRTH8c+IvORlNdeAslIUWdgrd4MVoonEzoXYuAgvpQh3YKPsSCQ//es/miYzRc3fqdPzdM7pOd/OefpJ0kufSfKYZL1Lj3qS9Out3WIZZyh67XXq1muQwu6xgGsMYvu/QAq7wywu0YfN/wIp7AbzuMBn+2SqBFGuZw5XeGv9MwXIGsZxgGcsYQU1nOMEo9jAAIJdvGIVi38AOkUDQzhugoxhomysTE6U9+Hy7CtjzQnWWvLN2vwCpPnuyHekxzryk08l+UjSaNWRqiGmk7wnOWwXtCohJkuIo5+Utcp1vCTZ7yTxVU3iKclOh3wlIMUkHpJsdampJ8kXU9fy58AJ6XUAAAAASUVORK5CYII="/>
+    </pattern>
+  </defs>
+  <rect id="レイヤー_1" data-name="レイヤー 1" width="34" height="14" fill="url(#pattern)"/>
+</svg>
