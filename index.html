@@ -29,7 +29,7 @@
 <div class="mv">
     <header>
         <div class="header mv__header">
-            <div class="header__img"><img src="./assets/img/common/logo.png" alt=""></div>
+            <div class="header__img"><img src="./assets/img/common/logo.svg" alt=""></div>
             <ul class="header__menu">
                 <li><a href="">HOME</a></li>
                 <li><a href="">サービス</a></li>
@@ -40,11 +40,35 @@
                 <li><a class="btn" href="">お問い合わせ</a></li>
             </ul>
         </div>
+        <div class="headerSp">
+            <div class="headerSp__logo"><img src="./assets/img/common/logo2.svg" alt=""></div>
+            <div class="hbmenuBox">
+                <button type="button" class="hbmenuBox__btn js-btn">
+                    <span class="btn-line"></span>
+                  </button>
+                  <nav>
+                    <ul class="menu">
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">サービス</a></li>
+                        <li><a href="">メッセージ</a></li>
+                        <li><a href="">初めての方へ</a></li>
+                        <li><a href="">会社概要</a></li>
+                        <li><a href="">ニュース</a></li>
+                        <li><a class="btn" href="">お問い合わせ</a></li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
     </header>
-    <div class="mv__slick">
+    <div class="mv__slick pc">
         <img src="./assets/img/top/slider01.png" alt="">
         <img src="./assets/img/top/slider01.png" alt="">
         <img src="./assets/img/top/slider01.png" alt="">
+    </div>
+    <div class="mv__slick sp">
+        <img src="./assets/img/top/mv-sp.jpg" alt="">
+        <img src="./assets/img/top/mv-sp.jpg" alt="">
+        <img src="./assets/img/top/mv-sp.jpg" alt="">
     </div>
 </div>
 <div class="sec">
@@ -52,7 +76,7 @@
             <h2 class="titleBox__title">お知らせ</h2>
             <p class="titleBox__smallTitle">NEWS</p>
         </div>
-        <div class="sec__cards cards">
+        <div class="sec__cards cards slider-info">
             <a href="" class="cards__item card">
                 <div class="card__img"><img src="./assets/img/common/dammy.png" alt=""></div>
                 <div class="card__date">2021.01.01</div>
@@ -64,6 +88,16 @@
                 <div class="card__content">タイトルが入ります。タイトルが入ります。</div>
             </a>
             <a href=""  class="cards__item card">
+                <div class="card__img"><img src="./assets/img/common/dammy.png" alt=""></div>
+                <div class="card__date">2021.01.01</div>
+                <div class="card__content">タイトルが入ります。タイトルが入ります。</div>
+            </a>
+            <a href=""  class="cards__item card sp">
+                <div class="card__img"><img src="./assets/img/common/dammy.png" alt=""></div>
+                <div class="card__date">2021.01.01</div>
+                <div class="card__content">タイトルが入ります。タイトルが入ります。</div>
+            </a>
+            <a href=""  class="cards__item card sp">
                 <div class="card__img"><img src="./assets/img/common/dammy.png" alt=""></div>
                 <div class="card__date">2021.01.01</div>
                 <div class="card__content">タイトルが入ります。タイトルが入ります。</div>
@@ -128,7 +162,7 @@
 <div class="sec">
     <div class="sec__descTopLay descTop">
         <div class="descTop__texts">
-            <h3 class="descTop__title">タイトルが入ります。<br>
+            <h3 class="descTop__title">タイトルが入ります。<br class="pc">
                 タイトルが入りま....</h3>
                 <p class="descTop__text">
                     タイトルが入ります。タイトルが入ります。
@@ -144,7 +178,7 @@
         <h2 class="titleBox__title">シロクマの知恵袋</h2>
         <p class="titleBox__smallTitle">BLOG</p>
     </div>
-    <div class="sec__cards cards">
+    <div class="sec__cards cards slider-info">
         <a href="" class="cards__item card">
             <div class="card__img"><img src="./assets/img/common/dammy.png" alt=""></div>
             <div class="card__date">2021.01.01</div>
@@ -156,6 +190,16 @@
             <div class="card__content">タイトルが入ります。タイトルが入ります。</div>
         </a>
         <a href="" class="cards__item card">
+            <div class="card__img"><img src="./assets/img/common/dammy.png" alt=""></div>
+            <div class="card__date">2021.01.01</div>
+            <div class="card__content">タイトルが入ります。タイトルが入ります。</div>
+        </a>
+        <a href="" class="cards__item card sp">
+            <div class="card__img"><img src="./assets/img/common/dammy.png" alt=""></div>
+            <div class="card__date">2021.01.01</div>
+            <div class="card__content">タイトルが入ります。タイトルが入ります。</div>
+        </a>
+        <a href="" class="cards__item card sp">
             <div class="card__img"><img src="./assets/img/common/dammy.png" alt=""></div>
             <div class="card__date">2021.01.01</div>
             <div class="card__content">タイトルが入ります。タイトルが入ります。</div>
@@ -179,7 +223,7 @@
         </div>
         <div class="footerContactBox__btns">
             <a href="" class="footerContactBox__btn">お問い合わせ</a>
-            <a href="" class="footerContactBox__btn footerContactBox__btn--accent">無料出張相談</a>
+            <a href="" class="footerContactBox__btn footerContactBox__btn--accent pc">無料出張相談</a>
         </div>
     </div>
     <div class="gmap">
@@ -195,7 +239,7 @@
     </div>
     </div>
     <div class="copyRight">
-        <div class="copyRight__logo"><img src="" alt=""></div>
+        <div class="copyRight__logo"><img src="./assets/img/common/logo2.svg" alt=""></div>
         <div class="copyRight__text">Copyright © 2021 Vanilla bear All Rights Reserved.</div>
     </div>
 </footer>

@@ -7,6 +7,7 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
     font-size: 1.6em;
     line-height: 1.5;
+    
 }
 img{
   width: 100%;
@@ -27,6 +28,29 @@ a:hover{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &Sp{
+    display: none;
+  }
+  @include media-sp{
+    display: none;
+    &Sp{
+      display: block;
+      height: 47px;
+      background-color: #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      border-bottom: 1px solid $sub-color;
+      z-index: 100000;
+      &__logo{
+        height: 100%;
+        padding: 5px;
+        img{
+          max-height: 100%;
+        }
+      }
+    }
+  }
   &__menu{
     display: flex;
     font-weight: bold;
@@ -43,6 +67,149 @@ a:hover{
     }
   }
 }
+// .hbmenu{
+//   display: block;      
+//   width: 39px;      
+//   height: 39px;      
+//   position: relative;      
+//   z-index: 3;
+//   border:none;    
+//   &Box{
+//     position: absolute;
+//     right: 0;
+//     top: 20px;
+//     margin: auto;
+//   }
+// }    
+
+/**************** 以下、ハンバーガーボタンのスタイリング ****************/
+.hbmenuBox__btn {
+  /* ボタンの配置位置  */
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  /* ボタンの大きさ  */
+  width: 20px;
+  height: 20px;
+  /* バーガーの線をボタン範囲の中心に配置 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 最前面に */
+  z-index: 10;
+}
+
+/***** 真ん中のバーガー線 *****/
+.btn-line {
+  /* 線の長さと高さ */
+  width: 100%;
+  height: 1px;
+  /* バーガー線の色 */
+  background-color: $sub-color;
+  /* バーガー線の位置基準として設定 */
+  position: relative;
+  transition: .2s;
+}
+
+/***** 上下のバーガー線 *****/
+.btn-line::before,
+.btn-line::after {
+  right: 0;
+  content: "";
+  /* 基準線と同じ大きさと色 */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $sub-color;
+  transition: .2s;
+}
+
+
+.btn-line::before {
+  /* 上の線の位置 */
+  transform: translateY(-8px);
+}
+
+
+.btn-line::after {
+  /* 下の線の位置 */
+  width: 13px;
+  transform: translateY(8px);
+}
+
+/***** メニューオープン時 *****/
+.btn-line.open {
+  /* 真ん中の線を透明に */
+  background-color: transparent;
+}
+
+.btn-line.open::before,
+.btn-line.open::after {
+  content: "";
+  transition: .2s;
+  width: 20px;
+}
+
+.btn-line.open::before {
+  /* 上の線を傾ける */
+  transform: rotate(45deg);
+}
+
+.btn-line.open::after {
+  /* 上の線を傾ける */
+  transform: rotate(-45deg);
+}
+
+/**************** ここまで、ハンバーガーボタンのスタイリング ****************/
+
+/**************** 以下、メニューのスタイリング ****************/
+.menu {
+  position: fixed;
+  /* メニューの位置マイナス指定で画面外に */
+  right: -100%;
+  width: 100%;
+  height: calc(100vh - 45px);
+  /* メニューを縦に */
+  display: flex;
+  flex-direction: column;
+  color: #efefef;
+  background-color: $sub-color;
+  transition: .3s;
+  justify-content: center;
+  padding: 20px;
+  li{margin: 20px;}
+  .btn{
+    color: $sub-color;
+    background-color: #fff;
+  }
+}
+
+
+/***** メニューオープン時位置0にして画面内に *****/
+.menu.open {
+  position: absolute;
+  right: 0;
+  z-index: 100000;
+}
+
+/* 600px以上はハンバーガーボタン非表示、ヘッダー固定 */
+@media screen and (min-width: 600px) {
+  .hbmenuBoxbtn {
+    display: none;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100px;
+    /* メニューを横に */
+    display: flex;
+    flex-direction: row;
+  }
+}
+/**************** ここまで、メニューのスタイリング ****************/
 .btn{
    padding: 1rem 2rem;
    border-radius: 50px;
@@ -76,6 +243,10 @@ a:hover{
 .mv{
   padding: 15px 0;
   background: linear-gradient(#036DB7, #2EA7E0 85%, #fff 85%);
+  @include media-sp{
+    margin-top: 46px;
+    padding: 0;
+  }
 &__header{
   margin-bottom: 30px;
 }
@@ -83,6 +254,14 @@ a:hover{
   margin: auto;
   img{
     margin: 0 5vw;
+    @include media-sp{
+      margin: 0;
+    }
+  }
+}
+.slick-dots{
+  @include media-sp{
+    bottom: 0;
   }
 }
 .slick-next{
@@ -101,10 +280,16 @@ a:hover{
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
   font-size: 0;
+  @include media-sp{
+    background: rgba(32, 32, 32, 0.2);
+  }
 }
 .slick-next:before{
 content: "\276D" !important;
 font-size: 3vw;
+@include media-sp{
+  font-size: 5vw;
+}
 }
 .slick-prev{
   color: white;
@@ -124,12 +309,19 @@ font-size: 3vw;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
 z-index: 10000;
+@include media-sp{
+  background: rgba(32, 32, 32, 0.2);
+}
 }
 .slick-prev::before{
   content: "\276C";
   font-size: 3vw;    
   position: relative;
   left: -1.2rem;
+  @include media-sp{
+    font-size: 5vw;
+    left: auto;
+  }
 }
 .slick-slide {
   transition: 1s ease;
@@ -143,6 +335,9 @@ z-index: 10000;
     max-width: 949px;
     margin: auto;
     padding: 110px 0 130px;
+    @include media-sp{
+      padding: 40px 0 40px;
+    }
     &__cards{
       margin-bottom: 89px;
     }
@@ -150,33 +345,67 @@ z-index: 10000;
       padding: 71px 0 80px;
       margin: auto;
       max-width:1280px;
+      @include media-sp{
+        padding: 35px 0 40px;
+      }
     }
     &Bg{
       background:$gradation;
       &__bigCards{
         margin-bottom: 85px;
       }
+      @include media-sp{
+        &__more{
+          margin: 0 3%;
+        }
+
+      }
     }
+    @include media-sp{
+    &__more{
+      margin: 0 3%;
+    }}
 }
+
 .titleBox{
   text-align: center;
   padding-bottom:42px ;
+  @include media-sp{
+    padding-bottom: 24px;
+  }
   &--secBg{
     margin-bottom: 70px;
+    @include media-sp{
+      margin: 0 5% 40px;
+    }
   }
   &__title{
     margin-bottom: 29px;
     font-size: 3.2rem;
+    @include media-sp{
+      margin-bottom: 10px;
+      font-size: 2.4rem;
+    }
     &--secBg{
       color: #fff;
       font-size: 5.2rem;
       margin-bottom: 35px;
+      @include media-sp{
+        font-size: 20px;
+        margin-bottom: 11px;
+      }
     }
   }
   &__smallTitle{
     color: $sub-color;
+    @include media-sp{
+      font-size: 1rem;
+    }
     &--secBg{
       color: #fff;
+      @include media-sp{
+        font-size: 12px;
+      }
     }
   }
 }
@@ -184,6 +413,9 @@ z-index: 10000;
   display: flex;
   &__item:not(:nth-child(3n)){
     margin-right: 41px;
+    @include media-sp{
+      margin-right: 0;
+    }
   }
 }
 .card{
@@ -195,10 +427,16 @@ z-index: 10000;
   &__date{
     color: #949494;
     margin-bottom: 15px;
+    @include media-sp{
+      font-size: 12px;
+    }
   }
   &__content{
     font-size: 1.8rem;
     font-weight: bold;
+    @include media-sp{
+      font-size: 12px;
+    }
   }
 }
 .morebtn{
@@ -224,15 +462,26 @@ z-index: 10000;
 }
 .bigCards{
 display: flex;
+@include media-sp{
+  display: block;
+  margin: 5%;
+}
 &__item:not(:nth-child(3n)){
   margin-right: 41px;
+  @include media-sp{
+    margin: 0 0 45px;
+  }
 }
+
 }
 .bigCard{
   width: calc(100% / 3);
   background-color: #fff;
   padding: 4px;
   border-radius: 10px;
+  @include media-sp{
+    width: 100%;
+  }
   &__img{
     border-radius: 10px 10px 0 0 ;
     overflow: hidden;
@@ -241,13 +490,24 @@ display: flex;
     font-weight: bold;
     font-size: 2.2rem;
     margin-bottom: 16px;
+    @include media-sp{
+      font-size: 1.6rem;
+      margin-bottom: 6px;
+    }
   }
   &__content{
     padding: 32px 40px 25px 40px;
+    @include media-sp{
+      padding: 18px 22px;
+    }
   }
   &__text{
     font-size: 1.4rem;
     margin-bottom: 40px;
+    @include media-sp{
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
   }
   &__btn{
     text-align: center;
@@ -260,33 +520,62 @@ display: flex;
 .descTop{
   display: flex;
   align-items: center;
+  @include media-sp{
+    display: block;
+    margin: 0 5%;
+  }
   &__texts{
     width: 50%;
+    @include media-sp{
+      width: 100%;
+      margin-bottom: 27px;
+    }
   }
   &__title{
     font-size: 36px;
     margin-bottom: 50px;
+    @include media-sp{
+      font-size: 2rem;
+      margin-bottom: 11px;
+    }
   }
 }
 .footerContents{
   padding: 45px 0 0;
+  @include media-sp{
+    padding-top: 25px;
+  }
   &__banners{
     max-width: 1280px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     margin-bottom: 54px;
+    flex-wrap: wrap;
+    @include media-sp{
+      padding: 0 5%;
+      margin-bottom: 40px;
+    }
     img{
       width: calc(92% / 4);
+      @include media-sp{
+        margin-bottom: 20px;
+        width: 46%;
+      }
     }
   }
   &__hr{
     max-width: 1080px;
     margin: auto;
     color: #fff;
+    width: 50%;
   }
   &__menu{
     padding: 12px;
+    @include media-sp{
+      padding: 0;
+
+    }
   }
 }
 .footerContactBox{
@@ -297,10 +586,24 @@ display: flex;
   justify-content: space-between;
   padding: 65px 0 100px;
   align-items: center;
+  @include media-sp{
+    padding: 20px 0 36px;
+    display: block;
+    text-align: center;
+  }
   &__title{
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: bold;
     margin-bottom: 10px;
+    @include media-sp{
+      font-size: 1.6rem;
+    }
+  }
+  &__text{
+    @include media-sp{
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
   }
   &__btn{
     &s{
@@ -317,6 +620,13 @@ display: flex;
     border-radius: 15px;
     overflow: hidden;
     position: relative;
+    @include media-sp{
+      width: 80%;
+      border-radius: 50px;
+      color: #000;
+      padding: 10px;
+      font-size: 12px;
+    }
     &::before{
       content: "";
       width: 100px;
@@ -329,6 +639,9 @@ display: flex;
       top: 0;
       bottom: 0;
       margin: auto;
+      @include media-sp{
+        display: none;
+      }
     }
     &::after{
       content: "";
@@ -343,6 +656,9 @@ display: flex;
       top: 0;
       bottom: 0;
       margin: auto;
+      @include media-sp{
+        display: none;
+      }
   }
   &--accent{
     color: $accent-color;
@@ -359,6 +675,9 @@ display: flex;
 .gmap{
   iframe{
     width: 100%;
+    @include media-sp{
+      height: 134px;
+    }
   }
 }
 .footerMenu{
@@ -367,17 +686,61 @@ display: flex;
   margin: auto;
   text-align: center;
   color: #fff;
+  @include media-sp{
+    display: block;
+    background-color: #333333;
+    color: #fff;
+  }
   li{
     flex-grow: 1;
+    @include media-sp{
+      padding: 10px;
+      text-align: left;
+      font-size: 10px;
+      border-bottom: 1px solid #fff;
+    }
   }
   li + li {
     border-left: 1px solid #fff;
+    @include media-sp{
+      border-left: none;
+    }
   }
 }
 .copyRight{
   padding: 20px;
   text-align: center;
+  &__logo{
+    width: 200px;
+    margin: auto auto 20px;
+  }
   &__text{
     font-size: 12px;
+  }
+}
+.slider-info{
+  @include media-sp{
+  padding-bottom: 20px;
+  margin-bottom: 50px !important;
+  a{
+    padding: 0 15px;
+  }}
+}
+
+
+
+
+
+
+
+.pc{
+  @include media-sp{
+    display: none;
+  }
+}
+.sp{
+  display: none;
+  @include media-sp{
+    display: block;
   }
 }
