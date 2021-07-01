@@ -30,7 +30,20 @@ $slider.on("beforeChange", (event, slick, currentSlide, nextSlide) => {
     }
   });
 });
- 
+if(window.matchMedia("(max-width: 768px)").matches){
+	$('.mv__slick').slick({
+    dots: true,
+    speed: 1000,
+    slidesToShow: 1
+});
+	$('.slider-info').slick({
+    dots: true,
+    centerMode: true,
+    speed: 1000,
+    arrows: false,
+    slidesToShow: 1
+});
+}else{ 
 $('.mv__slick').slick({
     dots: true,
     centerMode: true,
@@ -38,6 +51,7 @@ $('.mv__slick').slick({
     speed: 1000,
     slidesToShow: 1
 });
+}
 var timer = false;
 $(window).resize(function() {
 if (timer !== false) {
@@ -48,4 +62,10 @@ timer = setTimeout(function() {
 location.reload();
 }, 200);
 });
+});
+
+$(function () {
+  $('.js-btn').on('click', function () { // js-btnクラスをクリックすると、
+    $('.menu , .btn , .btn-line').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
+  })
 });
