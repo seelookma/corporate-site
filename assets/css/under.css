@@ -8,13 +8,13 @@
   border-bottom: 1px solid #2EA7E0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .breadCrumbBox {
     border-bottom: 1px solid #DBF3FF;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .breadCrumb {
     padding: 10px;
     font-size: 10px;
@@ -44,7 +44,7 @@
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mv--under {
     background-image: none;
     padding: 30px;
@@ -60,7 +60,7 @@
   padding-left: 25px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mv--under__title {
     font-size: 24px;
     padding-left: 12px;
@@ -72,7 +72,7 @@
   color: #333333;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mv--under__subTitle {
     font-size: 12px;
   }
@@ -87,7 +87,7 @@
   margin: auto auto 74px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .msMovBox__logo {
     width: 50%;
     margin: auto auto 45px;
@@ -98,7 +98,7 @@
   padding: 68px  0 87px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .sec--small {
     padding: 34px 0 44px;
   }
@@ -110,7 +110,7 @@
   line-height: 2;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .messageContent__text {
     font-size: 12px;
   }
@@ -120,7 +120,7 @@
   margin-bottom: 40px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .messageContent__text:not(:last-child) {
     margin-bottom: 24px;
   }
@@ -130,7 +130,7 @@
   font-size: 36px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .messageContent__text--exBig {
     font-size: 18px;
   }
@@ -140,7 +140,7 @@
   font-size: 24px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .messageContent__text--big {
     font-size: 12px;
   }
@@ -157,7 +157,7 @@
   background-size: cover;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .fTitle {
     padding: 15px 25px;
   }
@@ -171,7 +171,7 @@
   position: relative;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .fTitle__Bg {
     padding: 62px;
   }
@@ -197,7 +197,7 @@
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .fTitle__title {
     font-size: 20px;
   }
@@ -207,7 +207,7 @@
   color: #036DB7;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .fTitle__subTitle {
     font-size: 10px;
   }
@@ -217,7 +217,7 @@
   width: 318px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .copyRight__logo--under {
     width: 30%;
   }
