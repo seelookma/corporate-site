@@ -477,7 +477,7 @@ a:hover {
 }
 
 .titleBox__title {
-  margin-bottom: 29px;
+  margin-bottom: 16px;
   font-size: 3.2rem;
 }
 
@@ -907,7 +907,7 @@ a:hover {
 
 @media screen and (max-width: 767px) {
   .gmap iframe {
-    height: 134px;
+    height: 184px;
   }
 }
 
@@ -966,6 +966,12 @@ a:hover {
 
 .copyRight__text {
   font-size: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .copyRight__text {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 767px) {

@@ -380,7 +380,7 @@ z-index: 10000;
     }
   }
   &__title{
-    margin-bottom: 29px;
+    margin-bottom: 16px;
     font-size: 3.2rem;
     @include media-sp{
       margin-bottom: 10px;
@@ -676,7 +676,7 @@ display: flex;
   iframe{
     width: 100%;
     @include media-sp{
-      height: 134px;
+      height: 184px;
     }
   }
 }
@@ -716,6 +716,9 @@ display: flex;
   }
   &__text{
     font-size: 12px;
+    @include media-sp{
+      font-size: 10px;
+    }
   }
 }
 .slider-info{
