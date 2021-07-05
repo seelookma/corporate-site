@@ -44,7 +44,7 @@ a:hover {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .header {
     display: none;
   }
@@ -75,11 +75,14 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          width: 40%;
+          justify-content: space-between;
+          min-width: 600px;
 }
 
-.header__menu li:not(:first-of-type) {
+/* .header__menu li:not(:first-of-type) {
   margin-left: 40px;
-}
+} */
 
 .header__menu a {
   padding-bottom: 10px;
@@ -221,25 +224,9 @@ a:hover {
   z-index: 100000;
 }
 
-/* 600px以上はハンバーガーボタン非表示、ヘッダー固定 */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 767px) {
   .hbmenuBoxbtn {
     display: none;
-  }
-  .menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100px;
-    /* メニューを横に */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
   }
 }
 
@@ -287,7 +274,7 @@ a:hover {
   background: linear-gradient(#036DB7, #2EA7E0 85%, #fff 85%);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mv {
     margin-top: 46px;
     padding: 0;
@@ -306,13 +293,13 @@ a:hover {
   margin: 0 5vw;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mv__slick img {
     margin: 0;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mv .slick-dots {
     bottom: 0;
   }
@@ -337,7 +324,7 @@ a:hover {
   font-size: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mv .slick-next {
     background: rgba(32, 32, 32, 0.2);
   }
@@ -348,7 +335,7 @@ a:hover {
   font-size: 3vw;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mv .slick-next:before {
     font-size: 5vw;
   }
@@ -374,7 +361,7 @@ a:hover {
   z-index: 10000;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mv .slick-prev {
     background: rgba(32, 32, 32, 0.2);
   }
@@ -387,7 +374,7 @@ a:hover {
   left: -1.2rem;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mv .slick-prev::before {
     font-size: 5vw;
     left: auto;
@@ -412,7 +399,7 @@ a:hover {
   padding: 110px 0 130px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .sec {
     padding: 40px 0 40px;
   }
@@ -428,7 +415,7 @@ a:hover {
   max-width: 1280px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .sec--lg {
     padding: 35px 0 40px;
   }
@@ -443,13 +430,13 @@ a:hover {
   margin-bottom: 85px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .secBg__more {
     margin: 0 3%;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .sec__more {
     margin: 0 3%;
   }
@@ -460,7 +447,7 @@ a:hover {
   padding-bottom: 42px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .titleBox {
     padding-bottom: 24px;
   }
@@ -470,7 +457,7 @@ a:hover {
   margin-bottom: 70px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .titleBox--secBg {
     margin: 0 5% 40px;
   }
@@ -481,7 +468,7 @@ a:hover {
   font-size: 3.2rem;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .titleBox__title {
     margin-bottom: 10px;
     font-size: 2.4rem;
@@ -494,7 +481,7 @@ a:hover {
   margin-bottom: 35px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .titleBox__title--secBg {
     font-size: 20px;
     margin-bottom: 11px;
@@ -505,7 +492,7 @@ a:hover {
   color: #036DB7;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .titleBox__smallTitle {
     font-size: 1rem;
   }
@@ -515,7 +502,7 @@ a:hover {
   color: #fff;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .titleBox__smallTitle--secBg {
     font-size: 12px;
   }
@@ -531,7 +518,7 @@ a:hover {
   margin-right: 41px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .cards__item:not(:nth-child(3n)) {
     margin-right: 0;
   }
@@ -551,7 +538,7 @@ a:hover {
   margin-bottom: 15px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .card__date {
     font-size: 12px;
   }
@@ -562,7 +549,7 @@ a:hover {
   font-weight: bold;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .card__content {
     font-size: 12px;
   }
@@ -601,7 +588,7 @@ a:hover {
   display: flex;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .bigCards {
     display: block;
     margin: 5%;
@@ -612,7 +599,7 @@ a:hover {
   margin-right: 41px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .bigCards__item:not(:nth-child(3n)) {
     margin: 0 0 45px;
   }
@@ -625,7 +612,7 @@ a:hover {
   border-radius: 10px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .bigCard {
     width: 100%;
   }
@@ -642,7 +629,7 @@ a:hover {
   margin-bottom: 16px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .bigCard__title {
     font-size: 1.6rem;
     margin-bottom: 6px;
@@ -653,7 +640,7 @@ a:hover {
   padding: 32px 40px 25px 40px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .bigCard__content {
     padding: 18px 22px;
   }
@@ -664,7 +651,7 @@ a:hover {
   margin-bottom: 40px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .bigCard__text {
     font-size: 1.2rem;
     margin-bottom: 30px;
@@ -689,7 +676,7 @@ a:hover {
           align-items: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .descTop {
     display: block;
     margin: 0 5%;
@@ -700,7 +687,7 @@ a:hover {
   width: 50%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .descTop__texts {
     width: 100%;
     margin-bottom: 27px;
@@ -712,7 +699,7 @@ a:hover {
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .descTop__title {
     font-size: 2rem;
     margin-bottom: 11px;
@@ -723,7 +710,7 @@ a:hover {
   padding: 45px 0 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerContents {
     padding-top: 25px;
   }
@@ -743,7 +730,7 @@ a:hover {
       flex-wrap: wrap;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerContents__banners {
     padding: 0 5%;
     margin-bottom: 40px;
@@ -754,7 +741,7 @@ a:hover {
   width: calc(92% / 4);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerContents__banners img {
     margin-bottom: 20px;
     width: 46%;
@@ -772,7 +759,7 @@ a:hover {
   padding: 12px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerContents__menu {
     padding: 0;
   }
@@ -794,7 +781,7 @@ a:hover {
           align-items: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerContactBox {
     padding: 20px 0 36px;
     display: block;
@@ -808,13 +795,13 @@ a:hover {
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerContactBox__title {
     font-size: 1.6rem;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerContactBox__text {
     font-size: 1rem;
     margin-bottom: 20px;
@@ -837,7 +824,7 @@ a:hover {
   margin-left: 51px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerContactBox__btn {
     width: 80%;
     border-radius: 50px;
@@ -861,7 +848,7 @@ a:hover {
   margin: auto;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerContactBox__btn::before {
     display: none;
   }
@@ -882,7 +869,7 @@ a:hover {
   margin: auto;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerContactBox__btn::after {
     display: none;
   }
@@ -905,7 +892,7 @@ a:hover {
   width: 100%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .gmap iframe {
     height: 184px;
   }
@@ -921,11 +908,12 @@ a:hover {
   color: #fff;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerMenu {
     display: block;
     background-color: #333333;
     color: #fff;
+    max-width: inherit;
   }
 }
 
@@ -935,7 +923,7 @@ a:hover {
           flex-grow: 1;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerMenu li {
     padding: 10px;
     text-align: left;
@@ -948,7 +936,7 @@ a:hover {
   border-left: 1px solid #fff;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .footerMenu li + li {
     border-left: none;
   }
@@ -968,13 +956,13 @@ a:hover {
   font-size: 12px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .copyRight__text {
     font-size: 10px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .slider-info {
     padding-bottom: 20px;
     margin-bottom: 50px !important;
@@ -984,7 +972,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .pc {
     display: none;
   }
@@ -994,7 +982,7 @@ a:hover {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .sp {
     display: block;
   }

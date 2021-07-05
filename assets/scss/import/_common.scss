@@ -192,22 +192,11 @@ a:hover{
   z-index: 100000;
 }
 
-/* 600px以上はハンバーガーボタン非表示、ヘッダー固定 */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 767px) {
   .hbmenuBoxbtn {
     display: none;
   }
 
-  .menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100px;
-    /* メニューを横に */
-    display: flex;
-    flex-direction: row;
-  }
 }
 /**************** ここまで、メニューのスタイリング ****************/
 .btn{
@@ -690,6 +679,7 @@ display: flex;
     display: block;
     background-color: #333333;
     color: #fff;
+    max-width: inherit;
   }
   li{
     flex-grow: 1;
