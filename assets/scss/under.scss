@@ -1,0 +1,165 @@
+@import "./import/mixin";
+.breadCrumb{
+    &Box{
+        border-bottom: 1px solid $main-color;
+        @include media-sp{
+            border-bottom: 1px solid #DBF3FF;
+        }
+    }
+    max-width: 1280px;
+    margin: auto;
+    padding: 10px 0;
+    @include media-sp{
+        padding: 10px;
+        font-size: 10px;
+    }
+    &__item{
+        a{
+            color: $sub-color;
+        }
+    &:not(:last-child){
+        &::after{
+            content: ">";
+            margin: 0 0.5em;
+        }
+    }
+}
+}
+.mv{
+    margin-bottom: 0;
+    background: linear-gradient(#036DB7, #2EA7E0 85%);
+    &--under{
+    background-image: url(/assets/img/message/mv.jpg);
+    background-position: left center;
+    background-size: cover;
+    padding: 110px 0 110px 123px;
+    background-repeat: no-repeat;
+    @include media-sp{
+        background-image: none;
+        padding: 30px;
+    }
+    &__title{
+        font-size: 3.2rem;
+        font-weight: bold;
+        color: $sub-color;
+        border-left: 1px solid $sub-color;
+        line-height: 1.5;
+        padding-left: 25px;
+        @include media-sp{
+            font-size: 24px;
+            padding-left: 12px;
+            line-height: 1;
+        }
+    }
+    &__subTitle{
+        color: $font-color;
+        @include media-sp{
+            font-size: 12px;
+        }
+    }
+    }
+}
+.mv__header {
+    margin-bottom: 0;
+}
+.msMovBox{
+    &__logo{
+        max-width: 226px;
+        margin: auto auto 74px;
+        @include media-sp{
+            width: 50%;
+            margin: auto auto 45px;
+        }
+    }
+}
+.sec--small{
+    padding: 68px  0 87px;
+    @include media-sp{
+        padding: 34px 0 44px;
+    }
+}
+
+.messageContent{
+    &__text{
+      font-size: 22px;
+      text-align: center;
+      line-height: 2;
+      @include media-sp{
+          font-size: 12px;
+      }
+      &:not(:last-child){
+        margin-bottom: 40px;
+        @include media-sp{
+            margin-bottom: 24px;
+        }
+      }
+      &--exBig{
+        font-size: 36px;
+        @include media-sp{
+            font-size: 18px;
+        }
+      }
+      &--big{
+        font-size: 24px;
+        @include media-sp{
+            font-size: 12px;
+        }
+      }
+    }
+  }
+  .textEmpha{
+    color: $sub-color;
+  }
+  .fTitle{
+    background-image: url(/assets/img/message/footer.jpg);
+    padding: 20px 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include media-sp{
+        padding: 15px 25px;
+    }
+    &__Bg{
+        padding: 140px;
+        background-color: rgba(255, 255, 255, 0.644);
+        border-radius: 20px;
+        text-align: center;
+        position: relative;
+        @include media-sp{
+            padding: 62px;
+            &::after{
+                content: "";
+                background-image:url(../img/common/footer_arrow-sp.svg);
+                display: block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 40px;
+                width: 20px;
+                margin: auto;
+                position: absolute;
+                right: 15px;
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+    &__title{
+        font-size: 36px;
+        margin-bottom: 10px;
+        @include media-sp{
+            font-size: 20px;
+        }
+    }
+    &__subTitle{
+        color: $sub-color;
+        @include media-sp{
+            font-size: 10px;
+        }
+    }
+  }
+.copyRight__logo--under{
+    width: 318px;
+    @include media-sp{
+        width: 30%;
+    }
+}
