@@ -55,9 +55,12 @@ a:hover{
     display: flex;
     font-weight: bold;
     align-items: center;
-    li{
-      &:not(:first-of-type){margin-left: 40px;}
-    }
+    width: 40%;
+          justify-content: space-between;
+          min-width: 600px;
+    // li{
+    //   &:not(:first-of-type){margin-left: 40px;}
+    // }
     a{
       padding-bottom: 10px;
       border-bottom: 1px solid #036db800;
@@ -324,6 +327,9 @@ z-index: 10000;
     max-width: 949px;
     margin: auto;
     padding: 110px 0 130px;
+    &Bg2{
+      background-color:#F9FDFF ;
+    }
     @include media-sp{
       padding: 40px 0 40px;
     }

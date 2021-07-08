@@ -34,6 +34,9 @@
     background-size: cover;
     padding: 110px 0 110px 123px;
     background-repeat: no-repeat;
+    &--company{
+        background-image: url(/assets/img/company/mv.jpg);
+    }
     @include media-sp{
         background-image: none;
         padding: 30px;
@@ -161,5 +164,26 @@
     width: 318px;
     @include media-sp{
         width: 30%;
+    }
+}
+.sec__table{
+    padding: 120px 70px;
+    background-color: #fff;
+}
+.table{
+    width: 100%;
+    color: #4F4F4F;
+    tr{
+        border-top: 1px solid #E2E2E2;
+        &:last-child{
+            border-bottom: 1px solid #E2E2E2;
+        }
+    }
+    th{
+        padding: 40px 0;
+        width: 30%;
+    }
+    td{
+        padding: 40px 0;
     }
 }
