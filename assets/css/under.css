@@ -44,6 +44,10 @@
   background-repeat: no-repeat;
 }
 
+.mv--under--company {
+  background-image: url(/assets/img/company/mv.jpg);
+}
+
 @media screen and (max-width: 768px) {
   .mv--under {
     background-image: none;
@@ -221,5 +225,32 @@
   .copyRight__logo--under {
     width: 30%;
   }
+}
+
+.sec__table {
+  padding: 120px 70px;
+  background-color: #fff;
+}
+
+.table {
+  width: 100%;
+  color: #4F4F4F;
+}
+
+.table tr {
+  border-top: 1px solid #E2E2E2;
+}
+
+.table tr:last-child {
+  border-bottom: 1px solid #E2E2E2;
+}
+
+.table th {
+  padding: 40px 0;
+  width: 30%;
+}
+
+.table td {
+  padding: 40px 0;
 }
 /*# sourceMappingURL=under.css.map */

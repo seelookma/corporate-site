@@ -75,14 +75,12 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-          width: 40%;
+  width: 40%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
           justify-content: space-between;
-          min-width: 600px;
+  min-width: 600px;
 }
-
-/* .header__menu li:not(:first-of-type) {
-  margin-left: 40px;
-} */
 
 .header__menu a {
   padding-bottom: 10px;
@@ -397,6 +395,10 @@ a:hover {
   max-width: 949px;
   margin: auto;
   padding: 110px 0 130px;
+}
+
+.secBg2 {
+  background-color: #F9FDFF;
 }
 
 @media screen and (max-width: 768px) {
