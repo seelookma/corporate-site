@@ -232,6 +232,13 @@
   background-color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .sec__table {
+    margin: 0 5%;
+    padding: 35px 20px;
+  }
+}
+
 .table {
   width: 100%;
   color: #4F4F4F;
@@ -250,7 +257,24 @@
   width: 30%;
 }
 
+@media screen and (max-width: 768px) {
+  .table th {
+    padding: 20px 0 10px 0;
+    font-size: 12px;
+    display: block;
+    width: 100%;
+  }
+}
+
 .table td {
   padding: 40px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .table td {
+    padding: 0 0 20px 0;
+    font-size: 12px;
+    display: block;
+  }
 }
 /*# sourceMappingURL=under.css.map */

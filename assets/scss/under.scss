@@ -169,6 +169,10 @@
 .sec__table{
     padding: 120px 70px;
     background-color: #fff;
+    @include media-sp{
+    margin: 0 5% ;
+    padding: 35px 20px;
+    }
 }
 .table{
     width: 100%;
@@ -182,8 +186,19 @@
     th{
         padding: 40px 0;
         width: 30%;
+        @include media-sp{
+            padding: 20px 0 10px 0 ;
+            font-size: 12px;
+            display: block;
+            width: 100%;
+        }
     }
     td{
         padding: 40px 0;
+        @include media-sp{
+            padding: 0 0 20px 0;
+            font-size: 12px;
+            display: block;
+        }
     }
 }
