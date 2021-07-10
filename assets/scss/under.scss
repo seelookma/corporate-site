@@ -202,3 +202,113 @@
         }
     }
 }
+.mv--under--contact{
+    background-image: url(/assets/img/contact/mv.jpg);
+}
+.contactDesc{
+    text-align: center;
+    color: #fff;
+    &__title{
+    font-size: 3.6rem;
+    margin-bottom: 30px;
+}
+&__note{
+    margin-bottom: 40px;
+}
+}
+.contactTelBox{
+    max-width: 1080px;
+    background-color: #fff;
+    padding: 35px;
+    text-align: center;
+    margin: auto;
+    &__text{
+        color: $accent-color;
+        font-size:36px;
+    }
+    &__tel{
+        font-size: 64px;
+        color: $sub-color;
+    }
+    &__note{
+        color: $sub-color;
+    }
+}
+.contactform{
+    dt{
+        font-weight: normal;
+        margin-bottom: 16px;
+    }
+    dd{
+        margin-bottom: 40px;
+    }
+    input[type="text"],input[type="email"]{
+        padding: 20px 13px;
+        background-color: #F4F4F4;
+        width: 100%;
+        &::placeholder {
+            color: rgb(218, 218, 218);
+          }
+    }
+    textarea{
+        @extend input[type="text"];
+    }
+    input[type="checkbox"]{
+        background-color: #F4F4F4;
+    }
+    &__privacy{
+        margin-bottom: 40px;
+    }
+    &__scroll{
+    margin-bottom: 40px;
+}
+}
+.required{
+    &::after{
+        content: "※";
+        color: #E68A00;
+        margin-left: 5px;
+        font-size: 1em;
+    }
+}
+.scroll{
+    padding: 18px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    overflow-y: scroll;
+    color: $sub-color;
+    border: 1px solid #707070;
+    &__title{
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 1.5rem;
+    }
+    &__stitle{
+        font-weight: bold;
+    }
+    &__content{
+        &:not(:last-child){
+        margin-bottom: 1.5rem;}
+    }
+}
+.privacyCheck{
+    text-align: center;
+    &__title{
+    margin-bottom: 9px;}
+    input[type="checkbox"]{
+        margin-right: 5px;
+    }
+    
+}
+
+.contactBtn{
+    padding: 20px 60px;
+    background-color: $sub-color;
+    color: #fff;
+    border-radius: 50px;
+    &s{
+        text-align: center;
+    }
+}

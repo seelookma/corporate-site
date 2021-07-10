@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .breadCrumb {
   max-width: 1280px;
   margin: auto;
@@ -276,5 +277,143 @@
     font-size: 12px;
     display: block;
   }
+}
+
+.mv--under--contact {
+  background-image: url(/assets/img/contact/mv.jpg);
+}
+
+.contactDesc {
+  text-align: center;
+  color: #fff;
+}
+
+.contactDesc__title {
+  font-size: 3.6rem;
+  margin-bottom: 30px;
+}
+
+.contactDesc__note {
+  margin-bottom: 40px;
+}
+
+.contactTelBox {
+  max-width: 1080px;
+  background-color: #fff;
+  padding: 35px;
+  text-align: center;
+  margin: auto;
+}
+
+.contactTelBox__text {
+  color: #E68A00;
+  font-size: 36px;
+}
+
+.contactTelBox__tel {
+  font-size: 64px;
+  color: #036DB7;
+}
+
+.contactTelBox__note {
+  color: #036DB7;
+}
+
+.contactform dt {
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+.contactform dd {
+  margin-bottom: 40px;
+}
+
+.contactform input[type="text"], .contactform textarea, .contactform input[type="email"] {
+  padding: 20px 13px;
+  background-color: #F4F4F4;
+  width: 100%;
+}
+
+.contactform input[type="text"]::-webkit-input-placeholder, .contactform textarea::-webkit-input-placeholder, .contactform input[type="email"]::-webkit-input-placeholder {
+  color: #dadada;
+}
+
+.contactform input[type="text"]:-ms-input-placeholder, .contactform textarea:-ms-input-placeholder, .contactform input[type="email"]:-ms-input-placeholder {
+  color: #dadada;
+}
+
+.contactform input[type="text"]::-ms-input-placeholder, .contactform textarea::-ms-input-placeholder, .contactform input[type="email"]::-ms-input-placeholder {
+  color: #dadada;
+}
+
+.contactform input[type="text"]::placeholder, .contactform textarea::placeholder, .contactform input[type="email"]::placeholder {
+  color: #dadada;
+}
+
+.contactform input[type="checkbox"] {
+  background-color: #F4F4F4;
+}
+
+.contactform__privacy {
+  margin-bottom: 40px;
+}
+
+.contactform__scroll {
+  margin-bottom: 40px;
+}
+
+.required::after {
+  content: "※";
+  color: #E68A00;
+  margin-left: 5px;
+  font-size: 1em;
+}
+
+.scroll {
+  padding: 18px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  overflow-y: scroll;
+  color: #036DB7;
+  border: 1px solid #707070;
+}
+
+.scroll__title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 1.5rem;
+}
+
+.scroll__stitle {
+  font-weight: bold;
+}
+
+.scroll__content:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.privacyCheck {
+  text-align: center;
+}
+
+.privacyCheck__title {
+  margin-bottom: 9px;
+}
+
+.privacyCheck input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.contactBtn {
+  padding: 20px 60px;
+  background-color: #036DB7;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.contactBtns {
+  text-align: center;
 }
 /*# sourceMappingURL=under.css.map */
