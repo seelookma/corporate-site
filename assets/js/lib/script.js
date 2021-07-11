@@ -1,3 +1,10 @@
+// ローディング
+window.onload = function() {
+  const spinner = document.getElementById('loading');
+  window.setTimeout(function() {spinner.classList.add('loaded');
+}, 1000);
+}
+
 $(function(){
     const $slider = $(".mv__slick");
  
@@ -68,4 +75,16 @@ $(function () {
   $('.js-btn').on('click', function () { // js-btnクラスをクリックすると、
     $('.menu , .btn , .btn-line').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
   });
+});
+
+
+// スクロールで変わるheader
+jQuery(window).on('scroll', function () {
+  if(window.matchMedia("(min-width: 769px)").matches){
+  if (150 < jQuery(this).scrollTop()) {
+      jQuery('.header,.mv').addClass('is-fixed');
+  } else {
+      jQuery('.header,.mv').removeClass('is-fixed');
+  }
+}
 });

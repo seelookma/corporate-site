@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .breadCrumb {
   max-width: 1280px;
   margin: auto;
@@ -17,7 +18,7 @@
 @media screen and (max-width: 768px) {
   .breadCrumb {
     padding: 10px;
-    font-size: 10px;
+    font-size: 1rem;
   }
 }
 
@@ -66,7 +67,7 @@
 
 @media screen and (max-width: 768px) {
   .mv--under__title {
-    font-size: 24px;
+    font-size: 2.4rem;
     padding-left: 12px;
     line-height: 1;
   }
@@ -78,7 +79,7 @@
 
 @media screen and (max-width: 768px) {
   .mv--under__subTitle {
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 }
 
@@ -109,14 +110,14 @@
 }
 
 .messageContent__text {
-  font-size: 22px;
+  font-size: 2.2rem;
   text-align: center;
   line-height: 2;
 }
 
 @media screen and (max-width: 768px) {
   .messageContent__text {
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 }
 
@@ -131,22 +132,22 @@
 }
 
 .messageContent__text--exBig {
-  font-size: 36px;
+  font-size: 3.6rem;
 }
 
 @media screen and (max-width: 768px) {
   .messageContent__text--exBig {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
 
 .messageContent__text--big {
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 @media screen and (max-width: 768px) {
   .messageContent__text--big {
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 }
 
@@ -197,13 +198,13 @@
 }
 
 .fTitle__title {
-  font-size: 36px;
+  font-size: 3.6rem;
   margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
   .fTitle__title {
-    font-size: 20px;
+    font-size: 2rem;
   }
 }
 
@@ -213,7 +214,7 @@
 
 @media screen and (max-width: 768px) {
   .fTitle__subTitle {
-    font-size: 10px;
+    font-size: 1rem;
   }
 }
 
@@ -230,6 +231,13 @@
 .sec__table {
   padding: 120px 70px;
   background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .sec__table {
+    margin: 0 5%;
+    padding: 35px 20px;
+  }
 }
 
 .table {
@@ -250,7 +258,275 @@
   width: 30%;
 }
 
+@media screen and (max-width: 768px) {
+  .table th {
+    padding: 20px 0 10px 0;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+  }
+}
+
 .table td {
   padding: 40px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .table td {
+    padding: 0 0 20px 0;
+    font-size: 1.2rem;
+    display: block;
+  }
+}
+
+.mv--under--contact {
+  background-image: url(/assets/img/contact/mv.jpg);
+}
+
+@media screen and (max-width: 768px) {
+  .mv--under--contact {
+    background-image: none;
+  }
+}
+
+.contactDesc {
+  text-align: center;
+  color: #fff;
+  margin: 0 5%;
+}
+
+.contactDesc__title {
+  font-size: 3.6rem;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactDesc__title {
+    font-size: 1.6rem;
+  }
+}
+
+.contactDesc__note {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactDesc__note {
+    font-size: 1.2rem;
+  }
+}
+
+.contactTelBox {
+  max-width: 1080px;
+  background-color: #fff;
+  padding: 35px;
+  text-align: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .contactTelBox {
+    padding: 35px 10px;
+  }
+}
+
+.contactTelBox__text {
+  color: #E68A00;
+  font-size: 3.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .contactTelBox__text {
+    font-size: 1.6rem;
+  }
+}
+
+.contactTelBox__tel {
+  font-size: 6.4rem;
+  color: #036DB7;
+}
+
+@media screen and (max-width: 768px) {
+  .contactTelBox__tel {
+    font-size: 3.6rem;
+  }
+}
+
+.contactTelBox__note {
+  color: #036DB7;
+}
+
+@media screen and (max-width: 768px) {
+  .contactTelBox__note {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactform {
+    margin: 0 10%;
+  }
+}
+
+.contactform dt {
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactform dt {
+    margin-bottom: 7px;
+    font-size: 1.2rem;
+  }
+}
+
+.contactform dd {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactform dd {
+    margin-bottom: 30px;
+  }
+}
+
+.contactform input[type="text"], .contactform textarea, .contactform input[type="email"] {
+  padding: 20px 13px;
+  background-color: #F4F4F4;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .contactform input[type="text"], .contactform textarea, .contactform input[type="email"] {
+    padding: 15px 7px;
+    font-size: 1.4rem;
+  }
+}
+
+.contactform input[type="text"]::-webkit-input-placeholder, .contactform textarea::-webkit-input-placeholder, .contactform input[type="email"]::-webkit-input-placeholder {
+  color: #dadada;
+}
+
+.contactform input[type="text"]:-ms-input-placeholder, .contactform textarea:-ms-input-placeholder, .contactform input[type="email"]:-ms-input-placeholder {
+  color: #dadada;
+}
+
+.contactform input[type="text"]::-ms-input-placeholder, .contactform textarea::-ms-input-placeholder, .contactform input[type="email"]::-ms-input-placeholder {
+  color: #dadada;
+}
+
+.contactform input[type="text"]::placeholder, .contactform textarea::placeholder, .contactform input[type="email"]::placeholder {
+  color: #dadada;
+}
+
+.contactform input[type="checkbox"] {
+  background-color: #F4F4F4;
+}
+
+.contactform__privacy {
+  margin-bottom: 40px;
+}
+
+.contactform__scroll {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactform__scroll {
+    margin-bottom: 20px;
+  }
+}
+
+.required::after {
+  content: "※";
+  color: #E68A00;
+  margin-left: 5px;
+  font-size: 1em;
+}
+
+.scroll {
+  padding: 18px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  overflow-y: scroll;
+  color: #036DB7;
+  border: 1px solid #707070;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll {
+    width: 100%;
+    height: 195px;
+  }
+}
+
+.scroll__title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll__title {
+    font-size: 1.6rem;
+  }
+}
+
+.scroll__stitle {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll__stitle {
+    font-size: 1.4rem;
+  }
+}
+
+.scroll__content:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll__text {
+    font-size: 1.2rem;
+  }
+}
+
+.privacyCheck {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .privacyCheck {
+    font-size: 1.2rem;
+  }
+}
+
+.privacyCheck__title {
+  margin-bottom: 9px;
+}
+
+.privacyCheck input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.contactBtn {
+  padding: 20px 60px;
+  background-color: #036DB7;
+  color: #fff;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactBtn {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+.contactBtns {
+  text-align: center;
 }
 /*# sourceMappingURL=under.css.map */

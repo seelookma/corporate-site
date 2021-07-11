@@ -11,7 +11,7 @@
     padding: 10px 0;
     @include media-sp{
         padding: 10px;
-        font-size: 10px;
+        font-size: 1rem;
     }
     &__item{
         a{
@@ -49,7 +49,7 @@
         line-height: 1.5;
         padding-left: 25px;
         @include media-sp{
-            font-size: 24px;
+            font-size: 2.4rem;
             padding-left: 12px;
             line-height: 1;
         }
@@ -57,7 +57,7 @@
     &__subTitle{
         color: $font-color;
         @include media-sp{
-            font-size: 12px;
+            font-size: 1.2rem;
         }
     }
     }
@@ -84,11 +84,11 @@
 
 .messageContent{
     &__text{
-      font-size: 22px;
+      font-size: 2.2rem;
       text-align: center;
       line-height: 2;
       @include media-sp{
-          font-size: 12px;
+          font-size: 1.2rem;
       }
       &:not(:last-child){
         margin-bottom: 40px;
@@ -97,15 +97,15 @@
         }
       }
       &--exBig{
-        font-size: 36px;
+        font-size: 3.6rem;
         @include media-sp{
-            font-size: 18px;
+            font-size: 1.8rem;
         }
       }
       &--big{
-        font-size: 24px;
+        font-size: 2.4rem;
         @include media-sp{
-            font-size: 12px;
+            font-size: 1.2rem;
         }
       }
     }
@@ -147,16 +147,16 @@
         }
     }
     &__title{
-        font-size: 36px;
+        font-size: 3.6rem;
         margin-bottom: 10px;
         @include media-sp{
-            font-size: 20px;
+            font-size: 2rem;
         }
     }
     &__subTitle{
         color: $sub-color;
         @include media-sp{
-            font-size: 10px;
+            font-size: 1rem;
         }
     }
   }
@@ -169,6 +169,10 @@
 .sec__table{
     padding: 120px 70px;
     background-color: #fff;
+    @include media-sp{
+    margin: 0 5% ;
+    padding: 35px 20px;
+    }
 }
 .table{
     width: 100%;
@@ -182,8 +186,193 @@
     th{
         padding: 40px 0;
         width: 30%;
+        @include media-sp{
+            padding: 20px 0 10px 0 ;
+            font-size: 1.2rem;
+            display: block;
+            width: 100%;
+        }
     }
     td{
         padding: 40px 0;
+        @include media-sp{
+            padding: 0 0 20px 0;
+            font-size: 1.2rem;
+            display: block;
+        }
+    }
+}
+.mv--under--contact{
+    background-image: url(/assets/img/contact/mv.jpg);
+    @include media-sp{
+        background-image: none;
+    }
+}
+.contactDesc{
+    text-align: center;
+    color: #fff;
+    margin: 0 5%;
+    &__title{
+    font-size: 3.6rem;
+    margin-bottom: 30px;
+    @include media-sp{
+        font-size: 1.6rem;
+    }
+}
+&__note{
+    margin-bottom: 40px;
+    @include media-sp{
+        font-size: 1.2rem;
+    }
+}
+}
+.contactTelBox{
+    max-width: 1080px;
+    background-color: #fff;
+    padding: 35px;
+    text-align: center;
+    margin: auto;
+    @include media-sp{
+        padding: 35px 10px;
+    }
+    &__text{
+        color: $accent-color;
+        font-size:3.6rem;
+        @include media-sp{
+            font-size: 1.6rem;
+        }
+    }
+    &__tel{
+        font-size: 6.4rem;
+        color: $sub-color;
+        @include media-sp{
+            font-size: 3.6rem;
+        }
+    }
+    &__note{
+        color: $sub-color;
+        @include media-sp{
+            font-size: 1.2rem;
+        }
+    }
+}
+.contactform{
+    @include media-sp{
+        margin: 0 10%;
+    }
+    dt{
+        font-weight: normal;
+        margin-bottom: 16px;
+        @include media-sp{
+            margin-bottom: 7px;
+            font-size: 1.2rem;
+        }
+    }
+    dd{
+        margin-bottom: 40px;
+        @include media-sp{
+            margin-bottom: 30px;
+        }
+    }
+    input[type="text"],input[type="email"]{
+        padding: 20px 13px;
+        background-color: #F4F4F4;
+        width: 100%;
+        @include media-sp{
+            padding: 15px 7px;
+            font-size: 1.4rem;
+        }
+        &::placeholder {
+            color: rgb(218, 218, 218);
+          }
+    }
+    textarea{
+        @extend input[type="text"];
+    }
+    input[type="checkbox"]{
+        background-color: #F4F4F4;
+    }
+    &__privacy{
+        margin-bottom: 40px;
+    }
+    &__scroll{
+    margin-bottom: 40px;
+    @include media-sp{
+        margin-bottom: 20px;
+    }
+}
+}
+.required{
+    &::after{
+        content: "※";
+        color: #E68A00;
+        margin-left: 5px;
+        font-size: 1em;
+    }
+}
+.scroll{
+    padding: 18px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    overflow-y: scroll;
+    color: $sub-color;
+    border: 1px solid #707070;
+    @include media-sp{
+        width: 100%;
+        height: 195px;
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 1.5rem;
+        @include media-sp{
+            font-size: 1.6rem;
+        }
+    }
+    &__stitle{
+        font-weight: bold;
+        @include media-sp{
+            font-size: 1.4rem;
+        }
+    }
+    &__content{
+        
+        &:not(:last-child){
+        margin-bottom: 1.5rem;}
+    }
+    &__text{
+        @include media-sp{
+            font-size: 1.2rem;
+        }
+    }
+}
+.privacyCheck{
+    text-align: center;
+    @include media-sp{
+        font-size: 1.2rem;
+    }
+    &__title{
+    margin-bottom: 9px;
+}
+
+    input[type="checkbox"]{
+        margin-right: 5px;
+    }
+    
+}
+
+.contactBtn{
+    padding: 20px 60px;
+    background-color: $sub-color;
+    color: #fff;
+    border-radius: 50px;
+    @include media-sp{
+        width: 100%;
+        padding: 20px 0;
+    }
+    &s{
+        text-align: center;
     }
 }
