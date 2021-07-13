@@ -1018,7 +1018,7 @@ a:hover {
   height: 100vh;
   -webkit-transition: all 1s;
   transition: all 1s;
-  background-color: #0bd;
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -1030,810 +1030,232 @@ a:hover {
   visibility: hidden;
 }
 
-.holder {
+.loading__container {
+  width: 50%;
+  max-width: 400px;
   position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #036DB7;
-  min-height: 400px;
-}
-
-.flip-preloader {
-  width: 300px;
-  height: 60px;
-  position: absolute;
-  left: 50%;
   top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  -webkit-perspective: 300px;
-          perspective: 300px;
-  -webkit-perspective-origin: 50% 50%;
-          perspective-origin: 50% 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  text-align: center;
 }
 
-.flip-preloader.example-1 {
-  top: 25%;
-  height: 100px;
-  width: 400px;
+#logo-illust-body-1 {
+  fill: #5ABAE0;
 }
 
-.flip-preloader.example-2 {
-  top: 75%;
-  height: 30px;
-  width: 200px;
+#logo-illust-phone-5 {
+  fill: #2E89BC;
+  /*   animation-name: anime-logo-parts;      
+  animation-duration: 2s;  
+  animation-timing-function:step-end ;  */
 }
 
-.flip-preloader div {
-  position: absolute;
-  width: 20%;
-  height: 100%;
-  background-color: red;
-  left: 0%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+#logo-illust-nose-2 {
+  -webkit-animation-name: anime-logo-parts;
+          animation-name: anime-logo-parts;
+  /*keyframe名*/
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  /*所要時間*/
+  -webkit-animation-timing-function: step-end;
+          animation-timing-function: step-end;
+  /*進行割合*/
+}
+
+#logo-illust-eye-3 {
+  -webkit-animation-name: anime-logo-parts;
+          animation-name: anime-logo-parts;
+  /*keyframe名*/
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  /*所要時間*/
+  -webkit-animation-timing-function: step-end;
+          animation-timing-function: step-end;
+  /*進行割合*/
+}
+
+/*#logo-illust-hand-4{
+  fill: #fff;
+    animation-name: anime-logo-parts; 
+  animation-duration: 2s;  
+  animation-timing-function:step-end ; 
+} */
+.logo-item {
+  stroke-width: 2;
+  /*線の太さ*/
+  stroke-dasharray: 4500;
+  /*線の間隔*/
+  -webkit-animation-name: anime-logo;
+          animation-name: anime-logo;
+  /*keyframe名*/
+  -webkit-animation-duration: 2.8s;
+          animation-duration: 2.8s;
+  /*所要時間*/
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  /*進行割合*/
 }
 
-.flip-preloader.example-1 div {
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-}
-
-.flip-preloader.example-2 div {
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-.flip-preloader div:nth-child(1) {
-  left: 0%;
-  background-color: #44B3C2;
-  -webkit-animation-name: flipPreloader1;
-          animation-name: flipPreloader1;
-  z-index: 1;
-}
-
-.flip-preloader div:nth-child(2) {
-  left: 20%;
-  background-color: #F1A94E;
-  -webkit-animation-name: flipPreloader2;
-          animation-name: flipPreloader2;
-  z-index: 2;
-}
-
-.flip-preloader div:nth-child(3) {
-  left: 40%;
-  background-color: #E45641;
-  -webkit-animation-name: flipPreloader3;
-          animation-name: flipPreloader3;
-  z-index: 3;
-}
-
-.flip-preloader div:nth-child(4) {
-  left: 60%;
-  background-color: #5D4C46;
-  -webkit-animation-name: flipPreloader4;
-          animation-name: flipPreloader4;
-  z-index: 4;
-}
-
-.flip-preloader div:nth-child(5) {
-  left: 80%;
-  background-color: #7B8D8E;
-  -webkit-animation-name: flipPreloader5;
-          animation-name: flipPreloader5;
-  z-index: 5;
-}
-
-@-webkit-keyframes flipPreloader1 {
+/* アニメーション設定 */
+@-webkit-keyframes anime-logo {
   0% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 0;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-    background-color: #44B3C2;
-  }
-  4% {
-    background-color: #44B3C2;
-  }
-  5% {
-    background-color: #7B8D8E;
-  }
-  10% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    opacity: 1;
-    background-color: #7B8D8E;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  11% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #44B3C2;
-  }
-  48% {
-    z-index: 1;
-  }
-  49% {
-    z-index: 10;
-  }
-  50% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  51% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-  60% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 1;
-    background-color: #44B3C2;
-  }
-  61% {
-    opacity: 0;
-  }
-  100% {
-    z-index: 10;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #44B3C2;
-  }
-}
-
-@keyframes flipPreloader1 {
-  0% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 0;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-    background-color: #44B3C2;
-  }
-  4% {
-    background-color: #44B3C2;
-  }
-  5% {
-    background-color: #7B8D8E;
-  }
-  10% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    opacity: 1;
-    background-color: #7B8D8E;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  11% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #44B3C2;
-  }
-  48% {
-    z-index: 1;
-  }
-  49% {
-    z-index: 10;
-  }
-  50% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  51% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-  60% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 1;
-    background-color: #44B3C2;
-  }
-  61% {
-    opacity: 0;
-  }
-  100% {
-    z-index: 10;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #44B3C2;
-  }
-}
-
-@-webkit-keyframes flipPreloader2 {
-  0% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    background-color: #7B8D8E;
-    opacity: 0;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  9% {
-    opacity: 0;
-  }
-  10% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 1;
-  }
-  15% {
-    background-color: #7B8D8E;
-  }
-  20% {
-    background-color: #7B8D8E;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  21% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #F1A94E;
-  }
-  48% {
-    z-index: 2;
-  }
-  49% {
-    z-index: 9;
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    background-color: #F1A94E;
-  }
-  61% {
-    background-color: #44B3C2;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-  64% {
-    background-color: #44B3C2;
-  }
-  65% {
-    background-color: #F1A94E;
-  }
-  70% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 1;
-  }
-  71% {
-    opacity: 0;
-  }
-  100% {
-    z-index: 9;
-    background-color: #F1A94E;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-}
-
-@keyframes flipPreloader2 {
-  0% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    background-color: #7B8D8E;
-    opacity: 0;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  9% {
-    opacity: 0;
-  }
-  10% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 1;
-  }
-  15% {
-    background-color: #7B8D8E;
-  }
-  20% {
-    background-color: #7B8D8E;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  21% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #F1A94E;
-  }
-  48% {
-    z-index: 2;
-  }
-  49% {
-    z-index: 9;
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    background-color: #F1A94E;
-  }
-  61% {
-    background-color: #44B3C2;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-  64% {
-    background-color: #44B3C2;
-  }
-  65% {
-    background-color: #F1A94E;
-  }
-  70% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 1;
-  }
-  71% {
-    opacity: 0;
-  }
-  100% {
-    z-index: 9;
-    background-color: #F1A94E;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-}
-
-@-webkit-keyframes flipPreloader3 {
-  0% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    background-color: #7B8D8E;
-    opacity: 0;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  19% {
-    opacity: 0;
-  }
-  20% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 1;
-  }
-  25% {
-    background-color: #7B8D8E;
-  }
-  30% {
-    background-color: #7B8D8E;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  31% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #E45641;
-  }
-  48% {
-    z-index: 3;
-  }
-  49% {
-    z-index: 8;
-  }
-  70% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    opactiy: 1;
-    background-color: #E45641;
-  }
-  71% {
-    background-color: #F1A94E;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-  74% {
-    background-color: #F1A94E;
-  }
-  75% {
-    background-color: #E45641;
-  }
-  80% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 1;
-  }
-  81% {
-    opacity: 0;
-  }
-  100% {
-    z-index: 8;
-    background-color: #E45641;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-}
-
-@keyframes flipPreloader3 {
-  0% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    background-color: #7B8D8E;
-    opacity: 0;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  19% {
-    opacity: 0;
-  }
-  20% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 1;
-  }
-  25% {
-    background-color: #7B8D8E;
-  }
-  30% {
-    background-color: #7B8D8E;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  31% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #E45641;
-  }
-  48% {
-    z-index: 3;
-  }
-  49% {
-    z-index: 8;
-  }
-  70% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    opactiy: 1;
-    background-color: #E45641;
-  }
-  71% {
-    background-color: #F1A94E;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-  74% {
-    background-color: #F1A94E;
-  }
-  75% {
-    background-color: #E45641;
-  }
-  80% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 1;
-  }
-  81% {
-    opacity: 0;
-  }
-  100% {
-    z-index: 8;
-    background-color: #E45641;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-}
-
-@-webkit-keyframes flipPreloader4 {
-  0% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    background-color: #7B8D8E;
-    opacity: 0;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  29% {
-    opacity: 0;
-  }
-  30% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 1;
-  }
-  35% {
-    background-color: #7B8D8E;
-  }
-  40% {
-    background-color: #7B8D8E;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  41% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #5D4C46;
-  }
-  48% {
-    z-index: 4;
-  }
-  49% {
-    z-index: 7;
-  }
-  80% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    opacity: 1;
-    background-color: #5D4C46;
-  }
-  81% {
-    background-color: #E45641;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-  84% {
-    background-color: #E45641;
+    fill: #fff;
+    /*塗りつぶし色*/
+    stroke-dashoffset: 4500;
+    /*線の始まりの開始位置*/
+    stroke: #808080;
+    /*パスの色*/
   }
   85% {
-    background-color: #5D4C46;
-  }
-  90% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 1;
-  }
-  91% {
-    opacity: 0;
+    fill: #fff;
+    /*塗りつぶし色*/
   }
   100% {
-    z-index: 7;
-    background-color: #5D4C46;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
+    stroke-dashoffset: 0;
+    /*線の始まりの開始位置*/
+    stroke: white;
+    /*パスの色*/
   }
 }
-
-@keyframes flipPreloader4 {
+@keyframes anime-logo {
   0% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    background-color: #7B8D8E;
-    opacity: 0;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  29% {
-    opacity: 0;
-  }
-  30% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 1;
-  }
-  35% {
-    background-color: #7B8D8E;
-  }
-  40% {
-    background-color: #7B8D8E;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  41% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #5D4C46;
-  }
-  48% {
-    z-index: 4;
-  }
-  49% {
-    z-index: 7;
-  }
-  80% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    opacity: 1;
-    background-color: #5D4C46;
-  }
-  81% {
-    background-color: #E45641;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-  84% {
-    background-color: #E45641;
+    fill: #fff;
+    /*塗りつぶし色*/
+    stroke-dashoffset: 4500;
+    /*線の始まりの開始位置*/
+    stroke: #808080;
+    /*パスの色*/
   }
   85% {
-    background-color: #5D4C46;
-  }
-  90% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 1;
-  }
-  91% {
-    opacity: 0;
+    fill: #fff;
+    /*塗りつぶし色*/
   }
   100% {
-    z-index: 7;
-    background-color: #5D4C46;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
+    stroke-dashoffset: 0;
+    /*線の始まりの開始位置*/
+    stroke: white;
+    /*パスの色*/
   }
 }
 
-@-webkit-keyframes flipPreloader5 {
+@-webkit-keyframes anime-logo-parts {
   0% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    background-color: #7B8D8E;
-    opacity: 0;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  39% {
-    opacity: 0;
-  }
-  40% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 1;
-  }
-  45% {
-    background-color: #7B8D8E;
-  }
-  48% {
-    z-index: 5;
-  }
-  49% {
-    z-index: 6;
-  }
-  50% {
-    background-color: #7B8D8E;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  51% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #7B8D8E;
-  }
-  90% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    opacity: 1;
-    background-color: #7B8D8E;
-  }
-  91% {
-    background-color: #5D4C46;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-  94% {
-    background-color: #5D4C46;
-  }
-  95% {
-    background-color: #7B8D8E;
+    fill: #fff;
   }
   100% {
-    z-index: 6;
-    background-color: #7B8D8E;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
+    fill: #000;
   }
 }
 
-@keyframes flipPreloader5 {
+@keyframes anime-logo-parts {
   0% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    background-color: #7B8D8E;
-    opacity: 0;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  39% {
-    opacity: 0;
-  }
-  40% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 1;
-  }
-  45% {
-    background-color: #7B8D8E;
-  }
-  48% {
-    z-index: 5;
-  }
-  49% {
-    z-index: 6;
-  }
-  50% {
-    background-color: #7B8D8E;
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-  }
-  51% {
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    background-color: #7B8D8E;
-  }
-  90% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    opacity: 1;
-    background-color: #7B8D8E;
-  }
-  91% {
-    background-color: #5D4C46;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-  }
-  94% {
-    background-color: #5D4C46;
-  }
-  95% {
-    background-color: #7B8D8E;
+    fill: #fff;
   }
   100% {
-    z-index: 6;
-    background-color: #7B8D8E;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
+    fill: #000;
   }
+}
+
+/* ローディングテキスト */
+.loading {
+  margin: auto;
+  width: 30%;
+}
+
+.loading span {
+  font-size: 24px;
+  text-align: center;
+  color: #adadad;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+  display: inline-block;
+  margin: 0 -.075em;
+  -webkit-animation: loading 1s infinite alternate;
+          animation: loading 1s infinite alternate;
+}
+
+.loading span:nth-child(2) {
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+.loading span:nth-child(3) {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.loading span:nth-child(4) {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+.loading span:nth-child(5) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.loading span:nth-child(6) {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.loading span:nth-child(7) {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+.loading span:nth-child(8) {
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
+.loading span:nth-child(9) {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+.loading span:nth-child(10) {
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+/* プログレスバー */
+#container {
+  margin: auto;
+  width: 60%;
+  height: 8px;
+  position: relative;
+}
+
+.progressbar-text {
+  right: 50% !important;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
