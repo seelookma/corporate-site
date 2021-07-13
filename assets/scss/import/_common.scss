@@ -243,7 +243,7 @@ a:hover{
    &[target="_blank"]{
     padding: 1rem 3rem;
      &::after{
-      content: url(/assets/img/common/tabs.svg);
+      content: url(..//img/common/tabs.svg);
       margin-left: 1rem;
      }
    }
@@ -468,20 +468,20 @@ z-index: 10000;
   text-align: right;
   font-size: 1.4rem;
   &::after{
-    content: url(/assets/img/common/right-arrow.svg);
+    content: url(../img/common/right-arrow.svg);
     margin-left: 1rem;
   }
   &--white{
     color: #fff;
     &::after{
-      content: url(/assets/img/common/right-arrow--white.svg);
+      content: url(../img/common/right-arrow--white.svg);
     }
   }
 }
 .external{
   text-align: right;
   & a::after{
-      content: url(/assets/img/common/tabs-black.svg);
+      content: url(../img/common/tabs-black.svg);
       margin-left: 1rem;
   }
 }

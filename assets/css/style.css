@@ -282,7 +282,7 @@ a:hover {
 }
 
 .btn[target="_blank"]::after {
-  content: url(/assets/img/common/tabs.svg);
+  content: url(..//img/common/tabs.svg);
   margin-left: 1rem;
 }
 
@@ -601,7 +601,7 @@ a:hover {
 }
 
 .morebtn::after {
-  content: url(/assets/img/common/right-arrow.svg);
+  content: url(../img/common/right-arrow.svg);
   margin-left: 1rem;
 }
 
@@ -610,7 +610,7 @@ a:hover {
 }
 
 .morebtn--white::after {
-  content: url(/assets/img/common/right-arrow--white.svg);
+  content: url(../img/common/right-arrow--white.svg);
 }
 
 .external {
@@ -618,7 +618,7 @@ a:hover {
 }
 
 .external a::after {
-  content: url(/assets/img/common/tabs-black.svg);
+  content: url(../img/common/tabs-black.svg);
   margin-left: 1rem;
 }
 
