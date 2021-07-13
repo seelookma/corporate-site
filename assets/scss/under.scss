@@ -29,13 +29,13 @@
     margin-bottom: 0;
     background: linear-gradient(#036DB7, #2EA7E0 85%);
     &--under{
-    background-image: url(/assets/img/message/mv.jpg);
+    background-image: url(../img/message/mv.jpg);
     background-position: left center;
     background-size: cover;
     padding: 110px 0 110px 123px;
     background-repeat: no-repeat;
     &--company{
-        background-image: url(/assets/img/company/mv.jpg);
+        background-image: url(../img/company/mv.jpg);
     }
     @include media-sp{
         background-image: none;
@@ -114,7 +114,7 @@
     color: $sub-color;
   }
   .fTitle{
-    background-image: url(/assets/img/message/footer.jpg);
+    background-image: url(../img/message/footer.jpg);
     padding: 20px 40px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -203,7 +203,7 @@
     }
 }
 .mv--under--contact{
-    background-image: url(/assets/img/contact/mv.jpg);
+    background-image: url(../img/contact/mv.jpg);
     @include media-sp{
         background-image: none;
     }
