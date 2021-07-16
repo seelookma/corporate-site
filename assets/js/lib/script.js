@@ -38,7 +38,7 @@ $slider.on("beforeChange", (event, slick, currentSlide, nextSlide) => {
   });
 });
 if(window.matchMedia("(max-width: 768px)").matches){
-	$('.mv__slick').slick({
+	var slider = $('.mv__slick').slick({
     dots: true,
     speed: 1000,
     slidesToShow: 1
@@ -51,7 +51,7 @@ if(window.matchMedia("(max-width: 768px)").matches){
     slidesToShow: 1
 });
 }else{ 
-$('.mv__slick').slick({
+  var slider = $('.mv__slick').slick({
     dots: true,
     centerMode: true,
     centerPadding: '60px',
@@ -65,9 +65,8 @@ if (timer !== false) {
 clearTimeout(timer);
 }
 timer = setTimeout(function() {
-//リロードする
-location.reload();
-}, 200);
+slider.slick('setPosition');
+}, 1000);
 });
 });
 

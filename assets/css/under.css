@@ -541,15 +541,34 @@
   margin-bottom: 69px;
 }
 
+@media screen and (max-width: 768px) {
+  .errorMessage__text {
+    font-size: 16px;
+  }
+}
+
 .errorMessage__btns {
   text-align: center;
+  margin: 0 5%;
 }
 
 .btn--error {
   padding: 1rem 8rem;
 }
 
+@media screen and (max-width: 768px) {
+  .btn--error {
+    padding: 1rem 3rem;
+  }
+}
+
 .btn--error:not(:first-child) {
   margin-left: 36px;
+}
+
+@media screen and (max-width: 768px) {
+  .btn--error:not(:first-child) {
+    margin-left: 5%;
+  }
 }
 /*# sourceMappingURL=under.css.map */
