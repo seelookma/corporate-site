@@ -118,19 +118,43 @@
     color: $sub-color;
   }
   .fTitle{
+    transition:all 0.8s cubic-bezier(.175, .885, .50, 1.5);
+    border: 1px solid rgb(199, 199, 199);
+    height: 368px;
+    box-sizing: border-box;
     background-image: url(../img/message/footer.jpg);
+    background-size: 100%;
+    background-position: center;
+    &:hover{
+    background-image: url(../img/message/footer.jpg);
+    border: 1px solid #fff;
     padding: 20px 40px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 110%;}
     @include media-sp{
-        padding: 15px 25px;
+        height: auto;
+        background-size: cover;
+        height: 179px;
+        &:hover{
+            padding: 15px 25px;
+            background-size: cover;
+        }
     }
     &__Bg{
-        padding: 140px;
-        background-color: rgba(255, 255, 255, 0.644);
-        border-radius: 20px;
+        // padding: 140px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         text-align: center;
         position: relative;
+        background-color: #fff;
+        .fTitle:hover &{
+            background-color: rgba(255, 255, 255, 0.644);
+            border-radius: 20px;
+            
+        }
         @include media-sp{
             padding: 62px;
             &::after{
