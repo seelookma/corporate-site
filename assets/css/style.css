@@ -78,9 +78,11 @@ a:hover {
   .headerSp__logo {
     height: 100%;
     padding: 5px;
+    text-align: center;
   }
   .headerSp__logo img {
     max-height: 100%;
+    max-width: 60px;
   }
 }
 
@@ -346,7 +348,7 @@ a:hover {
   display: block;
   background: rgba(255, 255, 255, 0.2);
   position: absolute;
-  padding: 2.5%;
+  padding: 2%;
   font-size: 3rem;
   height: 60%;
   vertical-align: middle;
@@ -362,7 +364,8 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .mv .slick-next {
-    background: rgba(32, 32, 32, 0.2);
+    padding: 4%;
+    background: rgba(32, 32, 32, 0.5);
   }
 }
 
@@ -399,7 +402,8 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .mv .slick-prev {
-    background: rgba(32, 32, 32, 0.2);
+    padding: 4%;
+    background: rgba(32, 32, 32, 0.5);
   }
 }
 
@@ -413,7 +417,7 @@ a:hover {
 @media screen and (max-width: 768px) {
   .mv .slick-prev::before {
     font-size: 5vw;
-    left: auto;
+    left: -3px;
   }
 }
 
@@ -860,10 +864,6 @@ a:hover {
   position: relative;
 }
 
-.footerContactBox__btns a:last-child {
-  margin-left: 51px;
-}
-
 @media screen and (max-width: 768px) {
   .footerContactBox__btn {
     width: 80%;
@@ -872,6 +872,12 @@ a:hover {
     padding: 10px;
     font-size: 1.2rem;
   }
+}
+
+.footerContactBox__btn span {
+  position: relative;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .footerContactBox__btn::before {
@@ -886,12 +892,20 @@ a:hover {
   top: 0;
   bottom: 0;
   margin: auto;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 @media screen and (max-width: 768px) {
   .footerContactBox__btn::before {
     display: none;
   }
+}
+
+.footerContactBox__btn:hover::before {
+  width: 100%;
+  border-radius: 0;
+  left: 0;
 }
 
 .footerContactBox__btn::after {

@@ -161,24 +161,60 @@
 }
 
 .fTitle {
+  -webkit-transition: all 0.8s cubic-bezier(0.175, 0.885, 0.5, 1.5);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.5, 1.5);
+  border: 1px solid #c7c7c7;
+  height: 368px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-image: url(../img/message/footer.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+
+.fTitle:hover {
+  background-image: url(../img/message/footer.jpg);
+  border: 1px solid #fff;
   padding: 20px 40px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 110%;
 }
 
 @media screen and (max-width: 768px) {
   .fTitle {
+    height: auto;
+    background-size: cover;
+    height: 179px;
+  }
+  .fTitle:hover {
     padding: 15px 25px;
+    background-size: cover;
   }
 }
 
 .fTitle__Bg {
-  padding: 140px;
-  background-color: rgba(255, 255, 255, 0.644);
-  border-radius: 20px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   position: relative;
+  background-color: #fff;
+}
+
+.fTitle:hover .fTitle__Bg {
+  background-color: rgba(255, 255, 255, 0.644);
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 768px) {

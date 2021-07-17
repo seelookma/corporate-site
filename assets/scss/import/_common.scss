@@ -59,8 +59,10 @@ a:hover{
       &__logo{
         height: 100%;
         padding: 5px;
+        text-align: center;
         img{
           max-height: 100%;
+          max-width: 60px;
         }
       }
     }
@@ -291,7 +293,7 @@ a:hover{
   display: block;
   background: rgba(255,255,255,0.2);
   position: absolute;
-  padding: 2.5%;
+  padding: 2%;
   font-size: 3rem;
   height: 60%;
   vertical-align: middle;
@@ -303,7 +305,8 @@ a:hover{
   border-bottom-left-radius: 50%;
   font-size: 0;
   @include media-sp{
-    background: rgba(32, 32, 32, 0.2);
+    padding: 4%;
+    background: rgba(32, 32, 32, 0.5);
   }
 }
 .slick-next:before{
@@ -332,7 +335,8 @@ font-size: 3vw;
   border-bottom-right-radius: 50%;
 z-index: 10000;
 @include media-sp{
-  background: rgba(32, 32, 32, 0.2);
+  padding: 4%;
+  background: rgba(32, 32, 32, 0.5);
 }
 }
 .slick-prev::before{
@@ -342,7 +346,7 @@ z-index: 10000;
   left: -1.2rem;
   @include media-sp{
     font-size: 5vw;
-    left: auto;
+    left: -3px;
   }
 }
 .slick-slide {
@@ -632,9 +636,9 @@ display: flex;
   }
   &__btn{
     &s{
-      a:last-child{
-        margin-left: 51px;
-      }
+      // a:last-child{
+      //   margin-left: 51px;
+      // }
     }
     width: 271px;
     display: inline-block;
@@ -652,6 +656,10 @@ display: flex;
       padding: 10px;
       font-size: 1.2rem;
     }
+    span{
+      position: relative;
+      transition: all 0.5s ease-out;
+    }
     &::before{
       content: "";
       width: 100px;
@@ -664,9 +672,15 @@ display: flex;
       top: 0;
       bottom: 0;
       margin: auto;
+      transition: all 0.5s ease-out;
       @include media-sp{
         display: none;
       }
+    }
+    &:hover::before{
+      width: 100%;
+      border-radius: 0;
+      left: 0;
     }
     &::after{
       content: "";
